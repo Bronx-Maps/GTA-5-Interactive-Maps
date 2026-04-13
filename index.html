@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA 5 Mapa Interativo - Localização Exata por Coordenadas | Los Santos</title>
+  <meta name="description" content="O melhor mapa interativo do GTA V. Digite as coordenadas X e Y para encontrar locais exatos, ruas e pontos de interesse em Los Santos e Blaine County.">
+  <meta name="keywords" content="gta 5 mapa interativo, gta v map, mapa gta 5 satelite, coordenadas gta 5, gta 5 localizacao, gta rp mapa">
+  
+  <meta property="og:title" content="GTA 5 Mapa Interativo - Localização Exata por Coordenadas">
+  <meta property="og:description" content="Descubra qualquer local no mapa do GTA 5 apenas digitando as coordenadas X e Y. Mapa em alta resolução de Los Santos e Blaine County.">
+  <meta property="og:type" content="website">
+  
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="panel panel-left">
+      <div class="panel-card brand-card">
+        <div class="eyebrow">LOCAL EXATO NO MAPA</div>
+        <h1>GTA V - LOS SANTOS</h1>
+        <div class="divider"></div>
+        <div class="coord-line"><span>X:</span> <strong id="info-x">78.8508</strong></div>
+        <div class="coord-line"><span>Y:</span> <strong id="info-y">112.5588</strong></div>
+        <div class="coord-line"><span>Zoom:</span> <strong id="info-zoom">3.00</strong></div>
+        <div class="coord-line"><span>Heading:</span> <strong id="info-heading">161.7077</strong></div>
+      </div>
+
+      <div class="panel-card control-card">
+        <label class="field-label" for="x-input">X Position</label>
+        <input id="x-input" class="text-input" type="number" step="0.0001" value="78.8508">
+
+        <label class="field-label" for="y-input">Y Position</label>
+        <input id="y-input" class="text-input" type="number" step="0.0001" value="112.5588">
+
+        <div class="actions">
+          <button id="go-btn" class="action-btn primary">Ir Para o Ponto</button>
+          <button id="reset-btn" class="action-btn">Resetar</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="map-wrapper">
+      <div id="map"></div>
+
+      <div class="compass">
+        <span>N</span>
+        <span>E</span>
+        <span>S</span>
+        <span>W</span>
+      </div>
+    </main>
+  </div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="./app.js"></script>
+</body>
+</html>
