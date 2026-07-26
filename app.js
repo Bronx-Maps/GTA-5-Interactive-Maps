@@ -55,14 +55,12 @@ const map = L.map("map", {
   zoom: 3
 });
 
-L.tileLayer('https://gtamap.xyz/mapStyles/styleSatelite/{z}/{x}/{y}.jpg', {
-  minZoom: 1,
-  maxZoom: 7,
-  maxNativeZoom: 5,
-  noWrap: true,
-  updateWhenZooming: false,
-  keepBuffer: 4,
-  bounds: [[-4000, -4000], [8000, 4500]]
+L.imageOverlay('./assets/gta_map_8k.jpg', [
+  [-4000, -4000],
+  [8000, 4500]
+], {
+  opacity: 1,
+  interactive: false
 }).addTo(map);
 
 let marker;
